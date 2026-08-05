@@ -4,7 +4,11 @@ This repository is for the Integrating With HubSpot I: Foundations course. This 
 
 To read the full directions, please go to the [practicum instructions](https://app.hubspot.com/academy/l/tracks/1092124/1093824/5493?language=en).
 
-**Put your HubSpot developer test account custom objects URL link here:** https://app.hubspot.com/contacts/l/objects/${custom-obj-number}/views/all/list
+## About this project
+
+This is my submission for the Integrating with HubSpot I: Foundations practicum. The app manages a custom "houseplants" object in Hubspot -- tracking each plant's name, species, and watering schedule through a simple Express + Pug fron end that reads from and writes to HubSpot CRM API
+
+**Put your HubSpot developer test account custom objects URL link here:** https://app.hubspot.com/contacts/246965307/objects/2-233554991/views/all/list
 
 ___
 ## Tips:
