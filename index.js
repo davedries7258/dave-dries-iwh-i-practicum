@@ -17,6 +17,22 @@ const HOUSEPLANT_OBJECT_TYPE = '2-233554991';
 
 // * Code for Route 1 goes here
 
+app.get('/', async (req, res) => {
+    const houseplantsUrl = `https://api.hubapi.com/crm/v3/objects/${HOUSEPLANT_OBJECT_TYPE}?properties=name,species,watering_schedule`;
+    const headers = {
+        Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
+        'Content-Type': 'application/json'
+    };
+    try {
+        const resp = await axios.get(houseplantsUrl, { headers });
+        const data = resp.data.results;
+        res.render('homepage', { title: 'Houseplants | Integrating With HubSpot I Practicum', data });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error loading houseplants');
+    }
+});
+
 // TODO: ROUTE 2 - Create a new app.get route for the form to create or update new custom object data. Send this data along in the next route.
 
 // * Code for Route 2 goes here
